@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useTheme } from '../context/ThemeContext';
+import { useTheme } from '../context/useTheme';
 import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi';
 import './Header.css';
 
@@ -15,6 +15,13 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   
@@ -64,6 +71,8 @@ const Header = () => {
             className="menu-toggle" 
             onClick={toggleMobileMenu}
             aria-label="Toggle Mobile Menu"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
@@ -71,7 +80,11 @@ const Header = () => {
       </div>
 
       {/* Mobile Nav Menu */}
-      <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+      <div
+        id="mobile-menu"
+        className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}
+        aria-hidden={!isMobileMenuOpen}
+      >
         <nav>
           <ul className="mobile-nav-links">
             {navLinks.map((link) => (

@@ -2,10 +2,19 @@
   background-color: var(--bg-secondary);
 }
 
+.projects-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  max-width: 720px;
+  margin: -1.5rem auto 3rem auto;
+  font-size: 1.05rem;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 2.5rem;
+  align-items: stretch;
 }
 
 .project-card {
@@ -19,6 +28,7 @@
   /* Simulate Mobile App Card Look */
   padding-top: 2rem;
   position: relative;
+  height: 100%;
 }
 
 .project-card::before {
@@ -83,6 +93,12 @@
   font-size: 0.95rem;
   margin-bottom: 2rem;
   flex: 1;
+  line-height: 1.6;
+  min-height: 6.4em; /* 4 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .project-tech-list {
@@ -90,6 +106,7 @@
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: auto;
+  min-height: 3.25rem; /* helps keep cards equal height */
 }
 
 .project-tech-list li {

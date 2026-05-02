@@ -41,7 +41,7 @@ const Skills = () => {
         <div className="skills-grid">
           {skillsData.map((skill, index) => (
             <div 
-              key={index} 
+              key={skill.name} 
               className="skill-card glass animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >

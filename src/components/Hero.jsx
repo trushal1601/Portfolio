@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiDownload, FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight } from 'react-icons/fi';
 import './Hero.css';
 
 const Hero = () => {
@@ -12,7 +12,7 @@ const Hero = () => {
           <h1 className="hero-title">
             Trushal<span className="highlight">.</span>
           </h1>
-          <h2 className="hero-role">React-Native Developer</h2>
+          <h2 className="hero-role">React Native Developer</h2>
           <p className="hero-description">
             Crafting seamless, high-performance mobile experiences for iOS and Android. 
             Passionate about bringing innovative UI/UX designs to life through clean architecture 

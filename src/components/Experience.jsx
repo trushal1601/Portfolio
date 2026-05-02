@@ -5,7 +5,7 @@ const experiences = [
   {
     id: 1,
     role: "Junior Software Engineer",
-    company: "Vrinsoft Technology pvt. ltd.",
+    company: "Vrinsoft Technology Pvt. Ltd.",
     duration: "Nov 2024 - Present",
     description: [
       "Developed and maintained 3+ React Native applications (Karrot Partner, MADARIS, Wolf App, Easy Chat), delivering features across Android and iOS with consistent UI/UX quality.",
