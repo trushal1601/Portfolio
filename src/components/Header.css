@@ -17,6 +17,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 1001;
 }
 
 .logo {
@@ -108,7 +110,7 @@
   transform: translateY(-8px);
   opacity: 0;
   transition: all var(--transition-normal);
-  z-index: 999;
+  z-index: 1000;
   pointer-events: none;
 }
 
